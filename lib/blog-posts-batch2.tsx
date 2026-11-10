@@ -867,7 +867,173 @@ function OldCityContent() {
   )
 }
 
+/* ------------------------------------------------------------------ */
+/* 11. Is Baku expensive? Trip costs                                   */
+/* ------------------------------------------------------------------ */
+function CostContent() {
+  const rows: [string, string, string][] = [
+    ["Metro or city bus ride", "0.60 AZN", "about $0.35"],
+    ["BakıKart transport card", "2 AZN (plus top-up)", "about $1.20"],
+    ["Aeroexpress airport bus", "about 1.30–1.50 AZN", "under $1"],
+    ["Bolt ride across the centre", "4–6 AZN", "$2.50–3.50"],
+    ["Bolt from the airport", "20–25 AZN", "$12–15"],
+    ["Coffee in a café", "3–5 AZN", "$2–3"],
+    ["Local beer in a bar", "3–5 AZN", "$2–3"],
+    ["Lunch in a local restaurant", "8–15 AZN", "$5–9"],
+    ["Dinner with drinks, mid-range restaurant", "30–50 AZN", "$18–30"],
+    ["Hostel bed", "15–25 AZN", "$9–15"],
+    ["Mid-range hotel room", "80–150 AZN", "$47–90"],
+    ["Bus to Sheki, Gabala or Quba", "10–15 AZN", "$6–9"],
+  ]
+  return (
+    <div className="space-y-6">
+      <p className="text-xl leading-relaxed">
+        <strong>Is Baku expensive?</strong> Not compared with most European capitals. Public transport costs pennies,
+        ride-hailing is cheap and a good local meal costs less than a sandwich in London. Hotels and imported drinks are
+        where the money goes. Here is what things really cost in Baku, with sample daily budgets so you can plan your trip.
+      </p>
+
+      <div className="bg-muted/50 p-6 rounded-lg">
+        <p className="text-sm">
+          <strong>Currency:</strong> Azerbaijan uses the <strong>manat (AZN)</strong>. It has been held at about{" "}
+          <strong>1.70 AZN to US$1</strong> for several years, which makes budgeting easy. Prices below are typical at the
+          time of writing and rounded; they are a guide, not a quote.
+        </p>
+      </div>
+
+      <h2>Typical prices in Baku</h2>
+      <div className="overflow-x-auto">
+        <table className="w-full text-left border-collapse">
+          <thead>
+            <tr className="border-b border-border">
+              <th className="py-3 pr-4">Item</th>
+              <th className="py-3 pr-4">Price (AZN)</th>
+              <th className="py-3">Approx. USD</th>
+            </tr>
+          </thead>
+          <tbody>
+            {rows.map(([a, b, c]) => (
+              <tr key={a} className="border-b border-border">
+                <td className="py-3 pr-4">{a}</td>
+                <td className="py-3 pr-4 text-muted-foreground">{b}</td>
+                <td className="py-3 text-muted-foreground">{c}</td>
+              </tr>
+            ))}
+          </tbody>
+        </table>
+      </div>
+
+      <h2>Daily budget for Baku</h2>
+      <Ul>
+        <li>
+          <strong>Budget (about $35–50 a day):</strong> a hostel or simple guesthouse, the metro and buses, local cafés and
+          street food, and free sights such as the Boulevard and the Old City streets.
+        </li>
+        <li>
+          <strong>Mid-range (about $90–140 a day):</strong> a comfortable 3 to 4 star hotel, Bolt rides, sit-down
+          restaurants, museum tickets and one guided day trip during your stay.
+        </li>
+        <li>
+          <strong>Comfort (about $200+ a day):</strong> a 5 star hotel such as those near the Flame Towers, private
+          transfers and tours, and dinners at the city&apos;s best restaurants.
+        </li>
+      </Ul>
+
+      <h2>Accommodation: your biggest cost</h2>
+      <p>
+        Hotels take the largest share of most budgets. Prices rise sharply around the{" "}
+        <In href="/blog/azerbaijan-grand-prix-2027">Formula 1 Grand Prix</In> weekend and big conferences, and fall in
+        winter. Staying in or near the Old City saves on transport, as most sights are walkable. Our guide to{" "}
+        <In href="/blog/where-to-stay-in-baku">where to stay in Baku</In> compares the best areas.
+      </p>
+
+      <h2>Getting around for less</h2>
+      <p>
+        Buy a <strong>BakıKart</strong> at the airport or any metro station: one card can be shared by a group and works on
+        the metro, city buses and the Aeroexpress airport bus. For everything else, use the <strong>Bolt</strong> or Uber
+        apps rather than hailing a street taxi, which can charge several times more. See our full{" "}
+        <In href="/blog/getting-around-baku">guide to getting around Baku</In> and the{" "}
+        <In href="/blog/baku-airport-to-city-centre">airport to city centre guide</In>.
+      </p>
+
+      <h2>Food and drink</h2>
+      <p>
+        Eating out is excellent value. A plate of plov, qutab or kebab with bread and tea in a local restaurant is cheap,
+        and even smart restaurants are reasonably priced compared with Western Europe. Imported wine and spirits are the
+        main exception, while local Azerbaijani wine and beer are good value. Tipping around 10% is appreciated in
+        restaurants; check whether a service charge has already been added to the bill.
+      </p>
+
+      <h2>Sights and day trips</h2>
+      <p>
+        Many of Baku&apos;s best sights cost nothing: walking the Old City lanes, the seafront Boulevard and the view from
+        Highland Park. Paid sights such as the Maiden Tower, the Shirvanshahs&apos; Palace and the Heydar Aliyev Center
+        usually cost a few manat to around 20 AZN each. A group day trip to Gobustan and the mud volcanoes is often the best
+        value way to see several sights at once:{" "}
+        <TourLink href={tours.gobustan}>see Gobustan and Absheron day trips</TourLink>, or combine the{" "}
+        <TourLink href={tours.fire}>Fire Temple and Burning Mountain</TourLink> in one afternoon.
+      </p>
+
+      <h2>Money tips</h2>
+      <Ul>
+        <li>Cards are widely accepted in Baku, but carry some cash for small cafés, markets and regional trips.</li>
+        <li>Use bank ATMs rather than exchange kiosks with poor rates, and pay in manat when a card machine asks.</li>
+        <li>Agree taxi prices in advance if you don&apos;t use an app.</li>
+        <li>Visit in spring or autumn for good weather and lower hotel prices than summer and race weekend.</li>
+        <li>
+          Remember to budget for your <In href="/blog/azerbaijan-e-visa-guide">Azerbaijan e-visa</In> and{" "}
+          <In href="/blog/flights-to-baku">flights to Baku</In>.
+        </li>
+      </Ul>
+
+      <TipBox title="Sample 4-day mid-range budget (per person)">
+        <p>✓ Hotel, 3 nights shared: about $150–200</p>
+        <p>✓ Food and drink: about $120</p>
+        <p>✓ Transport in Baku: about $25</p>
+        <p>✓ Sights and one day trip: about $80–100</p>
+        <p>
+          ✓ <strong>Total, excluding flights and visa: about $375–445</strong>
+        </p>
+      </TipBox>
+
+      <Faq
+        items={[
+          {
+            q: "Is Baku expensive for tourists?",
+            a: "No, Baku is cheaper than most European capitals. Transport and local food are very cheap, while hotels and imported alcohol cost more.",
+          },
+          {
+            q: "How much money do I need per day in Baku?",
+            a: "Budget travellers can manage on about $35–50 a day. A comfortable mid-range trip costs about $90–140 a day per person, excluding flights.",
+          },
+          {
+            q: "Should I bring cash or card to Baku?",
+            a: "Both. Cards work in most hotels, restaurants and shops in Baku, but carry some manat for small cafés, markets and trips outside the city.",
+          },
+          {
+            q: "What currency is used in Baku?",
+            a: "The Azerbaijani manat (AZN). It has been held at about 1.70 manat to one US dollar for several years.",
+          },
+        ]}
+      />
+    </div>
+  )
+}
+
 export const batch2Posts = [
+  {
+    slug: "is-baku-expensive",
+    title: "Is Baku Expensive? Trip Costs and Daily Budget for 2026",
+    category: "Travel Tips",
+    excerpt:
+      "How much a trip to Baku costs: real prices for transport, food, hotels and sights in manat and dollars, plus budget, mid-range and comfort daily budgets.",
+    image: "/baku-budget-travel-tips.jpg",
+    date: "Nov 10, 2026",
+    updated: "2026-11-10",
+    readTime: "7 min read",
+    keywords: "is Baku expensive, Baku prices, Baku trip cost, Baku budget, cost of travel in Azerbaijan, how much money for Baku",
+    Content: CostContent,
+  },
   {
     slug: "best-time-to-visit-baku",
     title: "Best Time to Visit Baku: Weather Month by Month",

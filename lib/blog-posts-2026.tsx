@@ -323,63 +323,198 @@ function FlightsContent() {
 /* 4. Azerbaijan e-visa                                                */
 /* ------------------------------------------------------------------ */
 function EvisaContent() {
+  const L = ({ href, children }: { href: string; children: ReactNode }) => (
+    <Link href={href} className="text-primary underline">
+      {children}
+    </Link>
+  )
   return (
     <div className="space-y-6">
       <p className="text-xl leading-relaxed">
-        Most visitors to Baku need a visa, but the good news is that Azerbaijan&apos;s <strong>e-visa (ASAN Visa)</strong>{" "}
-        is quick and fully online. Here is how to apply step by step, and the mistakes to avoid.
+        Most visitors need a visa for Azerbaijan, but you don&apos;t need to visit an embassy. The official{" "}
+        <strong>e-visa, called the ASAN Visa</strong>, is applied for online in about 10 minutes and usually arrives by
+        email within 3 working days, or within 3 hours if you pay for the urgent service. This guide covers who needs it,
+        what it costs, the documents you need and the mistakes that get applications refused.
       </p>
 
       <div className="bg-muted/50 p-6 rounded-lg">
         <p className="text-sm">
-          <strong>Important:</strong> visa rules can change. Always check the official government portal,{" "}
-          <a href="https://evisa.gov.az/en/" target="_blank" rel="noopener noreferrer" className="text-primary underline">evisa.gov.az</a>,
-          before you travel. Avoid unofficial sites that look similar and charge extra fees.
+          <strong>Only apply on the official portal:</strong>{" "}
+          <a href="https://evisa.gov.az/en/" target="_blank" rel="noopener noreferrer" className="text-primary underline">
+            evisa.gov.az
+          </a>
+          . Many look-alike websites charge two or three times the real price. Visa rules and fees can change, so check the
+          portal for the latest details before you pay.
         </p>
+      </div>
+
+      <h2>Azerbaijan e-visa at a glance</h2>
+      <div className="overflow-x-auto">
+        <table className="w-full text-left border-collapse">
+          <tbody>
+            {[
+              ["Official name", "ASAN Visa (Azerbaijan electronic visa)"],
+              ["Where to apply", "evisa.gov.az (official government portal)"],
+              ["Standard processing", "Up to 3 working days"],
+              ["Urgent processing", "Within 3 hours, including weekends and holidays"],
+              ["Cost (at time of writing)", "Around US$25–30 standard, about US$60 urgent, paid by card"],
+              ["Length of stay", "Up to 30 days"],
+              ["Entries", "Single entry"],
+              ["Validity", "Use it within 90 days of issue"],
+            ].map(([k, v]) => (
+              <tr key={k} className="border-b border-border">
+                <th className="py-3 pr-4 font-semibold align-top">{k}</th>
+                <td className="py-3 text-muted-foreground">{v}</td>
+              </tr>
+            ))}
+          </tbody>
+        </table>
       </div>
 
       <h2>Who needs an e-visa for Azerbaijan?</h2>
       <p>
-        Citizens of many countries, including the <strong>United Kingdom</strong> and the <strong>United States</strong>,
-        need a visa and can apply online. Some nationalities can enter visa-free; the official portal tells you which rules
-        apply to your passport when you start your application.
+        Citizens of around 100 countries can get the e-visa, including the <strong>United Kingdom</strong>, the{" "}
+        <strong>United States</strong>, Canada, Australia, the EU countries, the Gulf states, India and Pakistan. A small
+        number of nationalities, including Turkey and most former Soviet countries, can enter <strong>visa-free</strong> for
+        short stays. The portal checks your nationality as soon as you start, and lists every eligible country.
       </p>
-
-      <h2>How to apply for the Azerbaijan e-visa</h2>
-      <ol className="list-decimal pl-6 space-y-2">
-        <li>Go to the official portal at <strong>evisa.gov.az</strong> and start a new application.</li>
-        <li>Enter your passport details exactly as they appear in your passport, plus your travel dates and address in Azerbaijan (your hotel).</li>
-        <li>Upload a clear photo of your passport&apos;s information page.</li>
-        <li>Choose <strong>standard</strong> or <strong>urgent</strong> processing and pay online by card.</li>
-        <li>Download your e-visa when it is approved, and print a copy to carry with your passport.</li>
-      </ol>
-
-      <h2>How long does it take?</h2>
       <p>
-        Standard e-visas are processed within <strong>3 working days</strong>. If you are in a hurry, the{" "}
-        <strong>urgent e-visa</strong> is processed within <strong>3 hours</strong>, including weekends and holidays, for a
-        higher fee. The current fees are shown on the official portal when you apply.
+        Every traveller needs their own e-visa, <strong>including children and babies</strong>. If you hold two passports,
+        apply with the one you will use to check in and enter Azerbaijan.
       </p>
 
-      <h2>Common e-visa mistakes</h2>
+      <h2>What you need before you start</h2>
       <ul className="list-disc pl-6 space-y-2">
-        <li><strong>Using a copycat website:</strong> only apply on evisa.gov.az.</li>
-        <li><strong>Typos in passport details:</strong> a single wrong letter can mean you are refused boarding.</li>
-        <li><strong>Leaving it too late:</strong> apply at least a week before you fly, especially before busy events like the <Link href="/blog/azerbaijan-grand-prix-2027" className="text-primary underline">Baku Grand Prix</Link>.</li>
-        <li><strong>Wrong dates:</strong> make sure your trip falls inside the visa&apos;s validity and permitted stay.</li>
+        <li>
+          <strong>A passport</strong> valid for at least 3 months after your e-visa expires. Six months of validity is the
+          safe choice.
+        </li>
+        <li>
+          <strong>A clear colour scan or photo of your passport information page</strong>, with all four corners and the
+          two code lines at the bottom readable.
+        </li>
+        <li>
+          <strong>Your travel dates and the address of your hotel</strong> or accommodation in Azerbaijan.
+        </li>
+        <li>
+          <strong>A debit or credit card</strong> to pay the fee online.
+        </li>
+        <li>
+          <strong>An email address</strong> you can check while you travel, as the e-visa is sent there.
+        </li>
       </ul>
 
-      <TipBox title="Next steps">
-        <p>✓ Book your flights: <Link href="/blog/flights-to-baku" className="text-primary underline">flights to Baku from the UK and USA</Link></p>
-        <p>✓ Plan your days: <Link href="/blog/baku-itinerary" className="text-primary underline">3–5 day Baku itinerary</Link></p>
-        <p>✓ Arrive smoothly: <Link href="/blog/baku-airport-to-city-centre" className="text-primary underline">Baku airport to city centre</Link></p>
+      <h2>How to apply for the ASAN Visa, step by step</h2>
+      <ol className="list-decimal pl-6 space-y-2">
+        <li>Go to <strong>evisa.gov.az</strong>, choose your language and click to apply for an e-visa.</li>
+        <li>Select your nationality, then your expected arrival date and the type of processing (standard or urgent).</li>
+        <li>
+          Enter your personal and passport details <strong>exactly</strong> as they appear in your passport, including
+          middle names.
+        </li>
+        <li>Add your hotel address in Azerbaijan and upload the scan of your passport page.</li>
+        <li>Check everything twice, then pay by card.</li>
+        <li>
+          When the e-visa is approved, download the PDF. Print a copy and keep it on your phone too: airline staff often
+          ask to see it at check-in.
+        </li>
+      </ol>
+
+      <h2>How long does the Azerbaijan e-visa take?</h2>
+      <p>
+        <strong>Standard</strong> applications are decided within <strong>3 working days</strong>, so apply at least a
+        week before you fly. Weekends and Azerbaijani public holidays (such as Novruz in March and the New Year period) do
+        not count as working days. If your trip is soon, the <strong>urgent</strong> option is processed within{" "}
+        <strong>3 hours</strong>, even on weekends and holidays, for a higher fee.
+      </p>
+
+      <h2>How much does the e-visa cost?</h2>
+      <p>
+        At the time of writing, the standard e-visa costs <strong>around US$25–30</strong> and the urgent e-visa about{" "}
+        <strong>US$60</strong> on the official portal. The exact fee is shown before you pay and can vary by nationality.
+        The fee is not refunded if your application is refused, so check your details carefully. If a website asks for much
+        more than this, you are almost certainly on an agency or copycat site rather than evisa.gov.az.
+      </p>
+
+      <h2>Staying more than 15 days? Register your stay</h2>
+      <p>
+        Foreign visitors who stay in Azerbaijan for <strong>more than 15 days</strong> must be registered with the State
+        Migration Service. Hotels normally do this for you. If you are staying in an apartment or with friends, ask your
+        host to register you, or do it yourself online through the migration service. Overstaying your e-visa can lead to
+        a fine and problems entering Azerbaijan again.
+      </p>
+
+      <h2>Common e-visa mistakes (and how to avoid them)</h2>
+      <ul className="list-disc pl-6 space-y-2">
+        <li>
+          <strong>Paying a copycat website:</strong> search results often show agencies first. The official address is
+          evisa.gov.az.
+        </li>
+        <li>
+          <strong>Typos in your name or passport number:</strong> one wrong letter can mean you are refused boarding. You
+          cannot edit an e-visa after it is issued, so you would need to apply and pay again.
+        </li>
+        <li>
+          <strong>A blurry passport scan:</strong> this is one of the most common reasons for refusal.
+        </li>
+        <li>
+          <strong>Wrong arrival date:</strong> your trip must start on or after the date you choose and fit inside the
+          30-day stay.
+        </li>
+        <li>
+          <strong>Leaving it too late before big events:</strong> apply early for busy weekends such as the{" "}
+          <L href="/blog/azerbaijan-grand-prix-2027">Baku Formula 1 Grand Prix</L>.
+        </li>
+      </ul>
+
+      <h2>Arriving by land from Georgia?</h2>
+      <p>
+        If you plan to travel overland, for example by road from Tbilisi to Sheki, check the current border situation on
+        the official portal and with your government&apos;s travel advice before you go. Land borders have had different
+        rules from airports in recent years, and flying into Baku is the simplest option for most visitors.
+      </p>
+
+      <TipBox title="Next steps for your trip">
+        <p>
+          ✓ Book your flights: <L href="/blog/flights-to-baku">flights to Baku from the UK and USA</L>
+        </p>
+        <p>
+          ✓ Plan your budget: <L href="/blog/is-baku-expensive">how much a trip to Baku costs</L>
+        </p>
+        <p>
+          ✓ Arrive smoothly: <L href="/blog/baku-airport-to-city-centre">Baku airport to city centre</L>
+        </p>
+        <p>
+          ✓ Plan your days: <L href="/blog/baku-itinerary">3–5 day Baku itinerary</L>
+        </p>
       </TipBox>
 
       <Faq
         items={[
-          { q: "Do UK citizens need a visa for Azerbaijan?", a: "Yes. UK citizens can apply online for an e-visa through the official portal, evisa.gov.az." },
-          { q: "Do US citizens need a visa for Azerbaijan?", a: "Yes. US citizens can also apply online for an e-visa before travelling." },
-          { q: "How fast can I get an Azerbaijan e-visa?", a: "Standard applications take up to 3 working days. The urgent option is processed within 3 hours for a higher fee." },
+          {
+            q: "Is the ASAN Visa the same as the Azerbaijan e-visa?",
+            a: "Yes. ASAN Visa is the official name of Azerbaijan's electronic visa system. You apply for it on evisa.gov.az.",
+          },
+          {
+            q: "Do UK citizens need a visa for Azerbaijan?",
+            a: "Yes. British citizens can apply online for the e-visa on evisa.gov.az before travelling.",
+          },
+          {
+            q: "Do US citizens need a visa for Azerbaijan?",
+            a: "Yes. US citizens can apply online for the e-visa, which allows a single stay of up to 30 days.",
+          },
+          {
+            q: "Can I get a visa on arrival in Baku?",
+            a: "Most visitors should not count on a visa on arrival. Get the e-visa online before you fly, as airlines usually check it at check-in.",
+          },
+          {
+            q: "How fast can I get an Azerbaijan e-visa?",
+            a: "Standard applications take up to 3 working days. The urgent service is processed within 3 hours, including weekends and holidays, for a higher fee.",
+          },
+          {
+            q: "Can I extend my Azerbaijan e-visa?",
+            a: "The e-visa allows up to 30 days. If you need to stay longer, contact the State Migration Service before your visa ends rather than overstaying.",
+          },
         ]}
       />
     </div>
@@ -493,15 +628,15 @@ export const newBlogPosts = [
   },
   {
     slug: "azerbaijan-e-visa-guide",
-    title: "Azerbaijan e-Visa: How to Apply Online (Step-by-Step Guide)",
+    title: "Azerbaijan e-Visa (ASAN Visa): Cost, Processing Time and How to Apply",
     category: "Travel Tips",
     excerpt:
-      "Do you need a visa for Baku? How to apply for the Azerbaijan e-visa (ASAN Visa) on the official portal, how long it takes, and the mistakes to avoid.",
+      "Do you need a visa for Azerbaijan? How to apply for the ASAN e-visa on evisa.gov.az, what it costs, how long it takes, the documents you need and the mistakes to avoid.",
     image: "/baku-old-city-maiden-tower.jpg",
     date: "Oct 25, 2026",
-    updated: "2026-10-25",
-    readTime: "6 min read",
-    keywords: "Azerbaijan e-visa, Azerbaijan visa UK, Azerbaijan visa US, ASAN visa, Baku visa",
+    updated: "2026-11-10",
+    readTime: "8 min read",
+    keywords: "Azerbaijan e-visa, Azerbaijan evisa, ASAN visa, e visa Azerbaijan, Azerbaijan visa cost, visa to Azerbaijan, Azerbaijan visa UK, Azerbaijan visa US",
     Content: EvisaContent,
   },
   {
