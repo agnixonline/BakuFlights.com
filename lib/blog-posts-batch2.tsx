@@ -1020,7 +1020,296 @@ function CostContent() {
   )
 }
 
+/* ------------------------------------------------------------------ */
+/* 12. Baku weather by month                                           */
+/* ------------------------------------------------------------------ */
+function WeatherContent() {
+  const months: [string, string, string, string][] = [
+    ["January", "7°C", "2°C", "Cold, grey and windy. Quiet city, ski season in the mountains."],
+    ["February", "7°C", "2°C", "Similar to January, occasional light snow."],
+    ["March", "10°C", "4°C", "Cool and changeable. Novruz festival around 20–21 March."],
+    ["April", "16°C", "8°C", "Spring arrives mid-month. Great for walking."],
+    ["May", "22°C", "14°C", "One of the best months: warm days, fresh evenings."],
+    ["June", "27°C", "19°C", "Warm to hot, long days, start of beach season."],
+    ["July", "30°C", "22°C", "Hottest month. Sightsee early and late."],
+    ["August", "30°C", "22°C", "Hot and dry, warmest sea for swimming."],
+    ["September", "25°C", "18°C", "Excellent: warm sea, golden light, fewer crowds."],
+    ["October", "19°C", "12°C", "Mild and pleasant, ideal for day trips."],
+    ["November", "13°C", "7°C", "Cooler, windier, more rain. Low prices."],
+    ["December", "9°C", "4°C", "Chilly. Festive lights and New Year celebrations."],
+  ]
+  return (
+    <div className="space-y-6">
+      <p className="text-xl leading-relaxed">
+        Baku has hot, dry summers, mild but windy winters and very little rain for most of the year. The best weather is
+        from <strong>late April to June</strong> and in <strong>September and October</strong>. Here is what to expect
+        in Baku month by month, with average temperatures and what to pack.
+      </p>
+
+      <h2>Baku average temperatures by month</h2>
+      <div className="overflow-x-auto">
+        <table className="w-full text-left border-collapse">
+          <thead>
+            <tr className="border-b border-border">
+              <th className="py-3 pr-4">Month</th>
+              <th className="py-3 pr-4">Avg high</th>
+              <th className="py-3 pr-4">Avg low</th>
+              <th className="py-3">What it&apos;s like</th>
+            </tr>
+          </thead>
+          <tbody>
+            {months.map(([m, hi, lo, note]) => (
+              <tr key={m} className="border-b border-border">
+                <td className="py-3 pr-4 font-semibold">{m}</td>
+                <td className="py-3 pr-4 text-muted-foreground">{hi}</td>
+                <td className="py-3 pr-4 text-muted-foreground">{lo}</td>
+                <td className="py-3 text-muted-foreground">{note}</td>
+              </tr>
+            ))}
+          </tbody>
+        </table>
+      </div>
+      <p className="text-sm text-muted-foreground">
+        Averages are rounded long-term figures. Real temperatures vary from year to year, so check the forecast a week
+        before you travel.
+      </p>
+
+      <h2>The wind: Baku&apos;s defining weather</h2>
+      <p>
+        Baku is nicknamed the <strong>&quot;City of Winds&quot;</strong>. Strong northerly winds, known locally as the
+        khazri, can blow at any time of year and make a sunny day feel several degrees colder, especially on the seafront
+        Boulevard and at Highland Park. Even in spring and autumn, bring a windproof layer.
+      </p>
+
+      <h2>Winter in Baku (December to February)</h2>
+      <p>
+        Winters are chilly rather than freezing, with highs around 7°C and grey skies. Snow in the city is unusual and
+        rarely lasts. It is the cheapest time for hotels, the Old City is calm, and it is ski season at{" "}
+        <In href="/blog/quba-shahdag-day-trip">Shahdag</In>, about three hours away. Pack a warm coat, hat and gloves.
+      </p>
+
+      <h2>Spring in Baku (March to May)</h2>
+      <p>
+        March is still cool, but by mid-April the city warms up and parks bloom. <strong>Novruz</strong>, the spring new
+        year in late March, brings bonfires, music and sweet pastries to the Old City. May is close to perfect for
+        sightseeing, with highs in the low 20s.
+      </p>
+
+      <h2>Summer in Baku (June to August)</h2>
+      <p>
+        July and August are hot, with highs around 30°C and some days much higher, plus strong sun and almost no rain. It
+        is beach season on the Absheron Peninsula and the Boulevard stays busy until late at night. Plan outdoor sights for
+        the morning and evening, carry water and sun cream, and escape to the cooler mountains for a day if the heat gets
+        too much.
+      </p>
+
+      <h2>Autumn in Baku (September to November)</h2>
+      <p>
+        September and October are many travellers&apos; favourite months: the sea is still warm in early September, the
+        summer crowds have gone and the light is beautiful for photos. It is also great day-trip weather for{" "}
+        <In href="/blog/gobustan-mud-volcanoes-day-trip">Gobustan and the mud volcanoes</In>. November is cooler, windier
+        and the wettest month, but hotel prices drop.
+      </p>
+
+      <TipBox title="What to pack for Baku">
+        <p>✓ A windproof jacket in every season except high summer</p>
+        <p>✓ Comfortable shoes for the Old City&apos;s stone streets and hills</p>
+        <p>✓ Sun hat, sunglasses and sun cream from May to September</p>
+        <p>✓ A warm coat, hat and gloves from December to February</p>
+        <p>✓ Covered shoulders and knees for mosques and the Fire Temple</p>
+      </TipBox>
+
+      <p>
+        Still deciding when to go? Our guide to the{" "}
+        <In href="/blog/best-time-to-visit-baku">best time to visit Baku</In> covers festivals, prices and crowds, and
+        our <In href="/blog/baku-itinerary">3 to 5 day Baku itinerary</In> works in any season. Whatever the weather, a{" "}
+        <TourLink href={tours.oldTown}>guided Old City walking tour</TourLink> is a great first morning.
+      </p>
+
+      <Faq
+        items={[
+          {
+            q: "What is the hottest month in Baku?",
+            a: "July and August are the hottest months, with average highs around 30°C and some days well above that.",
+          },
+          {
+            q: "Does it snow in Baku?",
+            a: "Occasionally in January and February, but snow rarely settles in the city. The nearby mountains around Shahdag get plenty of snow for skiing.",
+          },
+          {
+            q: "Can you swim in the Caspian Sea at Baku?",
+            a: "Yes, from about June to September. The best beaches are on the Absheron Peninsula, a short drive from the city centre.",
+          },
+          {
+            q: "Why is Baku so windy?",
+            a: "Baku sits on a peninsula in the Caspian Sea, open to strong northerly winds. It is known as the City of Winds.",
+          },
+        ]}
+      />
+    </div>
+  )
+}
+
+/* ------------------------------------------------------------------ */
+/* 13. Baku to Tbilisi by train                                        */
+/* ------------------------------------------------------------------ */
+function TrainContent() {
+  return (
+    <div className="space-y-6">
+      <p className="text-xl leading-relaxed">
+        After a six-year break, the <strong>Baku to Tbilisi train</strong> is running again. Passenger service between
+        Azerbaijan and Georgia restarted in <strong>May 2026</strong>, with day and overnight sleeper trains linking the
+        two capitals in about 10 hours. Here is how it works, what it costs and, importantly, who can currently use it.
+      </p>
+
+      <div className="bg-muted/50 p-6 rounded-lg">
+        <p className="text-sm">
+          <strong>Check before you plan:</strong> at the time of writing, reports say tickets are only sold to Azerbaijani
+          citizens and passport holders who can enter Azerbaijan <strong>visa-free</strong>, and that e-visa holders cannot
+          yet cross on the train. Azerbaijan&apos;s land borders also remain closed to most other travellers. Rules are
+          changing quickly, so check with Azerbaijan Railways at{" "}
+          <a href="https://ticket.ady.az" target="_blank" rel="noopener noreferrer" className="text-primary underline">
+            ticket.ady.az
+          </a>{" "}
+          and your government&apos;s travel advice before you book.
+        </p>
+      </div>
+
+      <h2>Baku–Tbilisi train timetable</h2>
+      <p>From November 2026 there are two trains a day in each direction (times are local and can change):</p>
+      <div className="overflow-x-auto">
+        <table className="w-full text-left border-collapse">
+          <thead>
+            <tr className="border-b border-border">
+              <th className="py-3 pr-4">Route</th>
+              <th className="py-3 pr-4">Departs</th>
+              <th className="py-3 pr-4">Arrives</th>
+              <th className="py-3">Journey</th>
+            </tr>
+          </thead>
+          <tbody>
+            {[
+              ["Baku → Tbilisi (day)", "09:10", "19:11", "about 10 hours"],
+              ["Baku → Tbilisi (overnight)", "23:00", "08:41", "about 9h 40m"],
+              ["Tbilisi → Baku (day)", "11:00", "20:26", "about 9h 30m"],
+              ["Tbilisi → Baku (overnight)", "22:00", "07:57", "about 10 hours"],
+            ].map(([r, d, a, j]) => (
+              <tr key={r} className="border-b border-border">
+                <td className="py-3 pr-4 font-semibold">{r}</td>
+                <td className="py-3 pr-4 text-muted-foreground">{d}</td>
+                <td className="py-3 pr-4 text-muted-foreground">{a}</td>
+                <td className="py-3 text-muted-foreground">{j}</td>
+              </tr>
+            ))}
+          </tbody>
+        </table>
+      </div>
+      <p>
+        The train runs from <strong>Baku Railway Station</strong> (next to 28 May metro) via Ganja, Agstafa and the border
+        posts at Boyuk Kasik and Gardabani, to <strong>Tbilisi Central Station</strong>.
+      </p>
+
+      <h2>Classes and ticket prices</h2>
+      <Ul>
+        <li>
+          <strong>Standard:</strong> open sleeper carriage with bunks, from around 54 AZN.
+        </li>
+        <li>
+          <strong>Comfort:</strong> four-berth compartments, from around 85 AZN.
+        </li>
+        <li>
+          <strong>Comfort Plus:</strong> four-berth compartments with extras, from around 123 AZN.
+        </li>
+        <li>
+          <strong>Luxe:</strong> private two-berth compartments with their own facilities, from around 189 AZN.
+        </li>
+      </Ul>
+      <p>
+        Prices are set in Swiss francs, so they move with exchange rates, and they can rise closer to departure. Tickets
+        go on sale up to 90 days ahead and have been selling out weeks in advance.
+      </p>
+
+      <h2>How to book</h2>
+      <ol className="list-decimal pl-6 space-y-2">
+        <li>Create an account on the Azerbaijan Railways site, ticket.ady.az, with your passport details.</li>
+        <li>Search for Baku to Tbilisi (or the reverse), pick your train and class, and pay by card.</li>
+        <li>
+          Alternatively, buy tickets in person at Baku or Tbilisi station, but book early as popular dates sell out.
+        </li>
+        <li>Carry your passport and ticket; there are passport checks at both borders on board or at the border stations.</li>
+      </ol>
+
+      <h2>Train or plane?</h2>
+      <p>
+        If you can use the train, it is a relaxed and scenic way to travel, and the overnight service saves a night&apos;s
+        hotel. If you need an e-visa for Azerbaijan, flying is currently the reliable option: there are frequent short
+        flights between Tbilisi and Baku, taking about an hour. See our guide to{" "}
+        <In href="/blog/flights-to-baku">flights to Baku</In> and the{" "}
+        <In href="/blog/azerbaijan-e-visa-guide">Azerbaijan e-visa guide</In>.
+      </p>
+
+      <TipBox title="Combining Baku and Georgia">
+        <p>✓ Spend 3 to 4 days in Baku with our <In href="/blog/baku-itinerary">Baku itinerary</In></p>
+        <p>
+          ✓ Head west via <In href="/blog/baku-to-sheki-gabala">Sheki and Gabala</In> for mountains and silk-road history
+        </p>
+        <p>✓ Then cross to Tbilisi by train (if eligible) or fly from Baku</p>
+        <p>
+          ✓ Budget with our <In href="/blog/is-baku-expensive">Baku trip cost guide</In>
+        </p>
+      </TipBox>
+
+      <Faq
+        items={[
+          {
+            q: "Is the Baku to Tbilisi train running?",
+            a: "Yes. Passenger service restarted in May 2026 after a six-year suspension, with daily day and overnight trains in each direction from November 2026.",
+          },
+          {
+            q: "How long is the train from Baku to Tbilisi?",
+            a: "About 9.5 to 10 hours, depending on the service.",
+          },
+          {
+            q: "Can I take the train with an Azerbaijan e-visa?",
+            a: "At the time of writing, reports say tickets are limited to Azerbaijani citizens and visa-free nationals, and e-visa holders cannot cross by train yet. Check ticket.ady.az before planning.",
+          },
+          {
+            q: "How much is the Baku to Tbilisi train?",
+            a: "Fares start from around 54 AZN in Standard class and go up to around 189 AZN for a private Luxe compartment, depending on exchange rates and demand.",
+          },
+        ]}
+      />
+    </div>
+  )
+}
+
 export const batch2Posts = [
+  {
+    slug: "baku-weather-by-month",
+    title: "Baku Weather by Month: Temperatures and What to Pack",
+    category: "Travel Tips",
+    excerpt:
+      "Baku weather month by month, with average high and low temperatures, the famous wind, the best months to visit and what to pack in every season.",
+    image: "/baku-panorama-destinations.jpg",
+    date: "Nov 10, 2026",
+    updated: "2026-11-10",
+    readTime: "6 min read",
+    keywords: "Baku weather, Baku weather by month, Baku temperature, Baku climate, Baku in winter, Baku in summer",
+    Content: WeatherContent,
+  },
+  {
+    slug: "baku-to-tbilisi-train",
+    title: "Baku to Tbilisi Train 2026: Timetable, Prices and Who Can Travel",
+    category: "Travel Tips",
+    excerpt:
+      "The Baku to Tbilisi train is running again. Timetable, classes and fares, how to book on ticket.ady.az, and the current rules on who can cross the border by train.",
+    image: "/baku-city-flame-towers-night.jpg",
+    date: "Nov 10, 2026",
+    updated: "2026-11-10",
+    readTime: "6 min read",
+    keywords: "Baku to Tbilisi train, Tbilisi to Baku train, Baku Tbilisi sleeper train, Azerbaijan Georgia train, ticket.ady.az",
+    Content: TrainContent,
+  },
   {
     slug: "is-baku-expensive",
     title: "Is Baku Expensive? Trip Costs and Daily Budget for 2026",

@@ -471,7 +471,8 @@ function EvisaContent() {
       <p>
         If you plan to travel overland, for example by road from Tbilisi to Sheki, check the current border situation on
         the official portal and with your government&apos;s travel advice before you go. Land borders have had different
-        rules from airports in recent years, and flying into Baku is the simplest option for most visitors.
+        rules from airports in recent years, and flying into Baku is the simplest option for most visitors. See our{" "}
+        <L href="/blog/baku-to-tbilisi-train">Baku to Tbilisi train guide</L> for the latest on rail travel.
       </p>
 
       <TipBox title="Next steps for your trip">
