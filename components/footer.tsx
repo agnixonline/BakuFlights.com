@@ -102,6 +102,17 @@ export function Footer() {
 
         <div className="mt-8 border-t border-border pt-8 text-center text-sm text-muted-foreground">
           <p>&copy; {new Date().getFullYear()} Baku Flights. All rights reserved.</p>
+          <p className="mt-2">
+            Design by{" "}
+            <a
+              href="https://corneliusuni.com"
+              target="_blank"
+              rel="noopener"
+              className="font-medium text-foreground hover:underline"
+            >
+              Cornelius Uni
+            </a>
+          </p>
         </div>
       </div>
     </footer>
