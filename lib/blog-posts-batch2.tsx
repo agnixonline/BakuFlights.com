@@ -6,7 +6,7 @@ const tours = {
   oldTown: "https://www.viator.com/tours/Baku/Baku-Old-Town-Walking-Tour/d22974-13710P4" + V,
   gobustan: "https://www.viator.com/tours/Baku/Day-Trip-Baku/d22974-63022P1" + V,
   fire: "https://www.viator.com/tours/Baku/Fire-Temple-and-Fire-Mountain-Private-Tour/d22974-75513P3" + V,
-  guba: "https://www.viator.com/tours/Baku/Guba-Shahdag-Adventure-Discover-Natures-Winter-Wonderland/d22974-441116P7" + V,
+  guba: "https://www.viator.com/tours/Baku/Azerbaijans-Alpine-Odyssey-Shahdag-and-Qusar-Exploration/d22974-90200P39" + V,
   food: "https://www.viator.com/tours/Baku/Free-Product/d22974-176027P10" + V,
 }
 

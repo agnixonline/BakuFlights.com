@@ -2,6 +2,7 @@ import Link from "next/link"
 import type { ReactNode } from "react"
 import { ExternalLink } from "lucide-react"
 import { viatorTours, viatorLink } from "./viator"
+import { ViatorWidget, VIATOR_WIDGETS } from "@/components/viator-widget"
 
 function In({ href, children }: { href: string; children: ReactNode }) {
   return (
@@ -94,8 +95,12 @@ function BestToursContent() {
         <li><strong>Best day trip:</strong> <Book id="gobustan" page={P}>Gobustan rock art and mud volcanoes</Book></li>
         <li><strong>Half-day or evening:</strong> <Book id="fire" page={P}>Fire Temple and Burning Mountain</Book></li>
         <li><strong>Mountains and snow:</strong> <Book id="guba" page={P}>Guba and Shahdag day trip</Book></li>
-        <li><strong>Travelling with kids:</strong> <Book id="kids" page={P}>private family day tour</Book></li>
+        <li><strong>Private or with kids:</strong> <Book id="city" page={P}>private Baku city tour</Book></li>
       </Ul>
+
+      <h2>Live prices and reviews</h2>
+      <p>Today&apos;s prices and traveller ratings for our top picks, straight from Viator:</p>
+      <ViatorWidget widgetRef={VIATOR_WIDGETS.topTours} />
 
       <h2>The best tours in Baku</h2>
 
@@ -147,10 +152,11 @@ function BestToursContent() {
         </p>
       </TourPick>
 
-      <TourPick id="kids" rank={5} page={P} best="families">
+      <TourPick id="city" rank={5} page={P} best="families and private groups">
         <p>
-          A private day planned around children, so you can see the city at your own pace with stops that keep everyone
-          happy. Private tours are also a good choice if you have limited mobility or simply prefer not to join a group.
+          A private guide and driver take you around old and new Baku at your own pace: the Old City, the Flame Towers,
+          the seafront Boulevard and the Heydar Aliyev Center. It&apos;s ideal with children, if you have limited
+          mobility, or if you&apos;d simply rather not join a group.
         </p>
       </TourPick>
 
@@ -269,6 +275,9 @@ function DayTripsContent() {
         but it&apos;s a long way for a single day. If you have time, stay a night. Our{" "}
         <In href="/blog/baku-to-sheki-gabala">Baku to Sheki and Gabala guide</In> explains how to get there.
       </p>
+
+      <h2>More day trips and tours from Baku</h2>
+      <ViatorWidget widgetRef={VIATOR_WIDGETS.allBaku} />
 
       <h2>Tips for day trips from Baku</h2>
       <Ul>

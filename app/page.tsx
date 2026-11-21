@@ -2,6 +2,7 @@ import Link from "next/link"
 import { Button } from "@/components/ui/button"
 import { Card, CardContent, CardFooter, CardHeader, CardTitle } from "@/components/ui/card"
 import { ArrowRight, Star, MapPin, Clock, Users } from "lucide-react"
+import { ViatorWidget, VIATOR_WIDGETS } from "@/components/viator-widget"
 
 export default function HomePage() {
   return (
@@ -168,6 +169,16 @@ export default function HomePage() {
       </section>
 
       {/* Destinations Grid */}
+      <section className="py-16 bg-muted/20">
+        <div className="container mx-auto px-4">
+          <div className="text-center mb-4">
+            <h2 className="font-serif text-3xl md:text-4xl font-bold mb-3">Book with Live Prices &amp; Real Reviews</h2>
+            <p className="text-muted-foreground max-w-2xl mx-auto">Today&apos;s prices and traveller ratings for our top Baku tours.</p>
+          </div>
+          <ViatorWidget widgetRef={VIATOR_WIDGETS.topTours} />
+        </div>
+      </section>
+
       <section className="py-20 bg-muted/30">
         <div className="container mx-auto px-4">
           <div className="text-center mb-12">

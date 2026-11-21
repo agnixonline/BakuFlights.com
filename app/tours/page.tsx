@@ -2,6 +2,7 @@ import Link from "next/link"
 import { Button } from "@/components/ui/button"
 import { Card, CardContent, CardFooter, CardHeader, CardTitle } from "@/components/ui/card"
 import { ArrowRight, Star, Clock, Users, MapPin } from "lucide-react"
+import { ViatorWidget, VIATOR_WIDGETS } from "@/components/viator-widget"
 
 export const metadata = {
   alternates: { canonical: "/tours" },
@@ -35,6 +36,18 @@ export default function ToursPage() {
       </section>
 
       {/* Tours Grid */}
+      <section className="py-16 bg-background border-b">
+        <div className="container mx-auto px-4">
+          <div className="text-center mb-4">
+            <h2 className="font-serif text-3xl md:text-4xl font-bold mb-3">Live Prices &amp; Real Reviews</h2>
+            <p className="text-muted-foreground max-w-2xl mx-auto">
+              Our top Baku tours with today&apos;s prices, traveller ratings and availability, straight from Viator.
+            </p>
+          </div>
+          <ViatorWidget widgetRef={VIATOR_WIDGETS.topTours} />
+        </div>
+      </section>
+
       <section className="py-16 bg-background">
         <div className="container mx-auto px-4">
           <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-3">
@@ -77,6 +90,16 @@ export default function ToursPage() {
       </section>
 
       {/* CTA Section */}
+      <section className="py-16 bg-background">
+        <div className="container mx-auto px-4">
+          <div className="text-center mb-4">
+            <h2 className="font-serif text-3xl md:text-4xl font-bold mb-3">More Things to Do in Baku</h2>
+            <p className="text-muted-foreground max-w-2xl mx-auto">Browse more top-rated tours and activities across Baku.</p>
+          </div>
+          <ViatorWidget widgetRef={VIATOR_WIDGETS.allBaku} />
+        </div>
+      </section>
+
       <section className="py-16 bg-muted/30">
         <div className="container mx-auto px-4 text-center">
           <h2 className="font-serif text-3xl md:text-4xl font-bold mb-4">Not Sure Which Tour to Book?</h2>
@@ -125,23 +148,23 @@ const allTours = [
   },
   {
     id: "baku-adventure",
-    title: "Guba Shahdag Winter Adventure",
+    title: "Shahdag, Quba & Candy Cane Mountains",
     location: "Guba & Shahdag",
-    description: "Discover nature's winter wonderland with hiking through mountains and scenic landscapes.",
+    description: "Day trip into the Caucasus to Quba, the striped Candy Cane mountains and the Shahdag mountain resort.",
     badge: "Adventure",
     image: "/baku-cycling-boulevard-adventure.jpg",
     viatorUrl:
-      "https://www.viator.com/tours/Baku/Guba-Shahdag-Adventure-Discover-Natures-Winter-Wonderland/d22974-441116P7?pid=P00220435&mcid=42383&medium=link&medium_version=selector&target_lander=NONE&campaign=tours-page",
+      "https://www.viator.com/tours/Baku/Azerbaijans-Alpine-Odyssey-Shahdag-and-Qusar-Exploration/d22974-90200P39?pid=P00220435&mcid=42383&medium=link&medium_version=selector&target_lander=NONE&campaign=tours-page",
   },
   {
-    id: "family-friendly-baku",
-    title: "Full Day Kids Entertainment Tour",
+    id: "private-city-baku",
+    title: "Private Baku City Tour",
     location: "Baku City",
     description:
-      "Private full-day tour designed for families with children featuring fun activities and entertainment.",
-    image: "/baku-ferris-wheel-family.jpg",
+      "See the Old City, Flame Towers, Boulevard and Heydar Aliyev Center at your own pace with a private guide. Great for families.",
+    image: "/baku-city-flame-towers-night.jpg",
     viatorUrl:
-      "https://www.viator.com/tours/Baku/A-Full-Day-Private-Kids-Entertaintment-Tour-in-Baku/d22974-372591P37?pid=P00220435&mcid=42383&medium=link&medium_version=selector&target_lander=NONE&campaign=tours-page",
+      "https://www.viator.com/tours/Baku/Baku-Private-City-Tour/d22974-75534P3?pid=P00220435&mcid=42383&medium=link&medium_version=selector&target_lander=NONE&campaign=tours-page",
   },
   {
     id: "food-tour-baku",
