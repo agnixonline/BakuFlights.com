@@ -16,7 +16,6 @@ export function Navigation() {
     { href: "/destinations", label: "Destinations" },
     { href: "/blog", label: "Blog" },
     { href: "/about", label: "About" },
-    { href: "/contact", label: "Contact" },
   ]
 
   return (

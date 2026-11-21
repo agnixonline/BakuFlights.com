@@ -138,35 +138,18 @@ export default function HomePage() {
                     alt={tour.title}
                     className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
                   />
-                  <div className="absolute top-4 right-4 bg-white px-3 py-1 rounded-full text-sm font-semibold">
-                    ${tour.price}
-                  </div>
                 </div>
                 <CardHeader>
                   <CardTitle className="text-xl">{tour.title}</CardTitle>
                 </CardHeader>
                 <CardContent>
                   <p className="text-muted-foreground text-sm mb-4">{tour.description}</p>
-                  <div className="flex items-center gap-4 text-sm text-muted-foreground">
-                    <div className="flex items-center gap-1">
-                      <Clock className="h-4 w-4" />
-                      {tour.duration}
-                    </div>
-                    <div className="flex items-center gap-1">
-                      <Users className="h-4 w-4" />
-                      {tour.groupSize}
-                    </div>
-                  </div>
-                  <div className="flex items-center gap-1 mt-2">
-                    <Star className="h-4 w-4 fill-yellow-400 text-yellow-400" />
-                    <span className="font-semibold">{tour.rating}</span>
-                    <span className="text-sm text-muted-foreground">({tour.reviews} reviews)</span>
-                  </div>
+                  <p className="text-sm font-medium text-primary">See prices, reviews and free cancellation options on Viator</p>
                 </CardContent>
                 <CardFooter>
                   <Button className="w-full" asChild>
-                    <a href={tour.viatorUrl} target="_blank" rel="noopener noreferrer">
-                      Book Now <ArrowRight className="ml-2 h-4 w-4" />
+                    <a href={tour.viatorUrl} target="_blank" rel="noopener noreferrer sponsored">
+                      Check Availability <ArrowRight className="ml-2 h-4 w-4" />
                     </a>
                   </Button>
                 </CardFooter>
@@ -283,11 +266,6 @@ const featuredTours = [
     id: "baku-city-tour",
     title: "Baku City & Old Town Tour",
     description: "Explore the ancient walled city, Maiden Tower, and modern Flame Towers in one unforgettable day.",
-    price: 45,
-    duration: "8 hours",
-    groupSize: "Small group",
-    rating: 4.9,
-    reviews: 324,
     image: "/baku-old-city-maiden-tower.jpg",
     viatorUrl:
       "https://www.viator.com/tours/Baku/Baku-Old-Town-Walking-Tour/d22974-13710P4?pid=P00220435&mcid=42383&medium=link&medium_version=selector&target_lander=NONE&campaign=home-featured",
@@ -296,11 +274,6 @@ const featuredTours = [
     id: "gobustan-mud-volcanoes",
     title: "Gobustan & Mud Volcanoes",
     description: "Visit ancient rock art and bubbling mud volcanoes in this otherworldly landscape.",
-    price: 55,
-    duration: "6 hours",
-    groupSize: "Small group",
-    rating: 4.8,
-    reviews: 287,
     image: "/gobustan-petroglyphs-mud-volcanoes.jpg",
     viatorUrl:
       "https://www.viator.com/tours/Baku/Day-Trip-Baku/d22974-63022P1?pid=P00220435&mcid=42383&medium=link&medium_version=selector&target_lander=NONE&campaign=home-featured",
@@ -309,11 +282,6 @@ const featuredTours = [
     id: "fire-temple-yanardag",
     title: "Fire Temple & Burning Mountain",
     description: "Witness the eternal flames at Ateshgah Temple and Yanar Dag burning hillside.",
-    price: 40,
-    duration: "5 hours",
-    groupSize: "Private tour",
-    rating: 4.7,
-    reviews: 213,
     image: "/yanar-dag-burning-mountain-flames.jpg",
     viatorUrl:
       "https://www.viator.com/tours/Baku/Fire-Temple-and-Fire-Mountain-Private-Tour/d22974-75513P3?pid=P00220435&mcid=42383&medium=link&medium_version=selector&target_lander=NONE&campaign=home-featured",

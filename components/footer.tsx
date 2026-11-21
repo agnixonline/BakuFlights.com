@@ -64,15 +64,10 @@ export function Footer() {
                   Food Guide
                 </Link>
               </li>
-              <li>
-                <Link href="/contact" className="text-muted-foreground hover:text-foreground">
-                  Contact Us
-                </Link>
-              </li>
             </ul>
           </div>
 
-          {/* Contact & Social */}
+          {/* Social */}
           <div>
             <h3 className="mb-4 font-semibold">Stay Connected</h3>
             <div className="flex gap-4 mb-4">
@@ -84,13 +79,6 @@ export function Footer() {
                 aria-label="Facebook"
               >
                 <Facebook className="h-5 w-5" />
-              </a>
-              <a
-                href="mailto:info@bakuflights.com"
-                className="text-muted-foreground hover:text-foreground"
-                aria-label="Email"
-              >
-                <Mail className="h-5 w-5" />
               </a>
             </div>
             <p className="text-sm text-muted-foreground">

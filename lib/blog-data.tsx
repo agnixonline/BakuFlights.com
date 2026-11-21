@@ -1,6 +1,7 @@
 import Link from "next/link"
 import { newBlogPosts } from "./blog-posts-2026"
 import { batch2Posts } from "./blog-posts-batch2"
+import { batch3Posts } from "./blog-posts-batch3"
 
 const legacyBlogPosts = [
   {
@@ -687,4 +688,4 @@ function AdventureSportsContent() {
   )
 }
 
-export const blogPosts = [...batch2Posts, ...newBlogPosts, ...legacyBlogPosts]
+export const blogPosts = [...batch3Posts, ...batch2Posts, ...newBlogPosts, ...legacyBlogPosts]
