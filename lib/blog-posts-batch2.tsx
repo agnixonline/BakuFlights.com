@@ -1,7 +1,7 @@
 import Link from "next/link"
 import type { ReactNode } from "react"
 
-const V = "?pid=P00220435&mcid=42383&medium=link&medium_version=selector&target_lander=NONE"
+const V = "?pid=P00220435&mcid=42383&medium=link&medium_version=selector&target_lander=NONE&campaign=blog-inline"
 const tours = {
   oldTown: "https://www.viator.com/tours/Baku/Baku-Old-Town-Walking-Tour/d22974-13710P4" + V,
   gobustan: "https://www.viator.com/tours/Baku/Day-Trip-Baku/d22974-63022P1" + V,

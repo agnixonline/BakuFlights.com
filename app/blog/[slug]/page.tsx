@@ -3,6 +3,7 @@ import Link from "next/link"
 import { Button } from "@/components/ui/button"
 import { ArrowLeft, Calendar, Clock, Facebook, Twitter, Linkedin, MessageCircle } from "lucide-react"
 import { blogPosts } from "@/lib/blog-data"
+import { TourCta, TourBanner } from "@/components/tour-cta"
 
 export async function generateStaticParams() {
   return blogPosts.map((post) => ({
@@ -114,9 +115,13 @@ export default async function BlogPostPage({ params }: { params: Promise<{ slug:
             </Button>
           </div>
 
+          <TourBanner slug={post.slug} context={`${post.title} ${post.category}`} />
+
           <div className="prose prose-lg max-w-none">
             <post.Content />
           </div>
+
+          <TourCta slug={post.slug} context={`${post.title} ${post.category}`} />
 
           {/* Share */}
           <div className="mt-12 pt-8 border-t">

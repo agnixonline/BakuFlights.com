@@ -290,7 +290,7 @@ const featuredTours = [
     reviews: 324,
     image: "/baku-old-city-maiden-tower.jpg",
     viatorUrl:
-      "https://www.viator.com/tours/Baku/Baku-Old-Town-Walking-Tour/d22974-13710P4?pid=P00220435&mcid=42383&medium=link&medium_version=selector&target_lander=NONE",
+      "https://www.viator.com/tours/Baku/Baku-Old-Town-Walking-Tour/d22974-13710P4?pid=P00220435&mcid=42383&medium=link&medium_version=selector&target_lander=NONE&campaign=home-featured",
   },
   {
     id: "gobustan-mud-volcanoes",
@@ -303,7 +303,7 @@ const featuredTours = [
     reviews: 287,
     image: "/gobustan-petroglyphs-mud-volcanoes.jpg",
     viatorUrl:
-      "https://www.viator.com/tours/Baku/Day-Trip-Baku/d22974-63022P1?pid=P00220435&mcid=42383&medium=link&medium_version=selector&target_lander=NONE",
+      "https://www.viator.com/tours/Baku/Day-Trip-Baku/d22974-63022P1?pid=P00220435&mcid=42383&medium=link&medium_version=selector&target_lander=NONE&campaign=home-featured",
   },
   {
     id: "fire-temple-yanardag",
@@ -316,7 +316,7 @@ const featuredTours = [
     reviews: 213,
     image: "/yanar-dag-burning-mountain-flames.jpg",
     viatorUrl:
-      "https://www.viator.com/tours/Baku/Fire-Temple-and-Fire-Mountain-Private-Tour/d22974-75513P3?pid=P00220435&mcid=42383&medium=link&medium_version=selector&target_lander=NONE",
+      "https://www.viator.com/tours/Baku/Fire-Temple-and-Fire-Mountain-Private-Tour/d22974-75513P3?pid=P00220435&mcid=42383&medium=link&medium_version=selector&target_lander=NONE&campaign=home-featured",
   },
 ]
 

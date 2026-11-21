@@ -125,7 +125,7 @@ const allTours = [
     badge: "Most Popular",
     image: "/baku-old-city-maiden-tower.jpg",
     viatorUrl:
-      "https://www.viator.com/tours/Baku/Baku-Old-Town-Walking-Tour/d22974-13710P4?pid=P00220435&mcid=42383&medium=link&medium_version=selector&target_lander=NONE",
+      "https://www.viator.com/tours/Baku/Baku-Old-Town-Walking-Tour/d22974-13710P4?pid=P00220435&mcid=42383&medium=link&medium_version=selector&target_lander=NONE&campaign=tours-page",
   },
   {
     id: "gobustan-mud-volcanoes",
@@ -139,7 +139,7 @@ const allTours = [
     reviews: 287,
     image: "/gobustan-petroglyphs-mud-volcanoes.jpg",
     viatorUrl:
-      "https://www.viator.com/tours/Baku/Day-Trip-Baku/d22974-63022P1?pid=P00220435&mcid=42383&medium=link&medium_version=selector&target_lander=NONE",
+      "https://www.viator.com/tours/Baku/Day-Trip-Baku/d22974-63022P1?pid=P00220435&mcid=42383&medium=link&medium_version=selector&target_lander=NONE&campaign=tours-page",
   },
   {
     id: "fire-temple-yanardag",
@@ -153,7 +153,7 @@ const allTours = [
     reviews: 213,
     image: "/yanar-dag-burning-mountain-flames.jpg",
     viatorUrl:
-      "https://www.viator.com/tours/Baku/Fire-Temple-and-Fire-Mountain-Private-Tour/d22974-75513P3?pid=P00220435&mcid=42383&medium=link&medium_version=selector&target_lander=NONE",
+      "https://www.viator.com/tours/Baku/Fire-Temple-and-Fire-Mountain-Private-Tour/d22974-75513P3?pid=P00220435&mcid=42383&medium=link&medium_version=selector&target_lander=NONE&campaign=tours-page",
   },
   {
     id: "baku-adventure",
@@ -168,7 +168,7 @@ const allTours = [
     badge: "Adventure",
     image: "/baku-cycling-boulevard-adventure.jpg",
     viatorUrl:
-      "https://www.viator.com/tours/Baku/Guba-Shahdag-Adventure-Discover-Natures-Winter-Wonderland/d22974-441116P7?pid=P00220435&mcid=42383&medium=link&medium_version=selector&target_lander=NONE",
+      "https://www.viator.com/tours/Baku/Guba-Shahdag-Adventure-Discover-Natures-Winter-Wonderland/d22974-441116P7?pid=P00220435&mcid=42383&medium=link&medium_version=selector&target_lander=NONE&campaign=tours-page",
   },
   {
     id: "family-friendly-baku",
@@ -183,7 +183,7 @@ const allTours = [
     reviews: 198,
     image: "/baku-ferris-wheel-family.jpg",
     viatorUrl:
-      "https://www.viator.com/tours/Baku/A-Full-Day-Private-Kids-Entertaintment-Tour-in-Baku/d22974-372591P37?pid=P00220435&mcid=42383&medium=link&medium_version=selector&target_lander=NONE",
+      "https://www.viator.com/tours/Baku/A-Full-Day-Private-Kids-Entertaintment-Tour-in-Baku/d22974-372591P37?pid=P00220435&mcid=42383&medium=link&medium_version=selector&target_lander=NONE&campaign=tours-page",
   },
   {
     id: "food-tour-baku",
@@ -198,6 +198,6 @@ const allTours = [
     badge: "Foodie Favorite",
     image: "/azerbaijani-food-kebab-plov.jpg",
     viatorUrl:
-      "https://www.viator.com/tours/Baku/Free-Product/d22974-176027P10?pid=P00220435&mcid=42383&medium=link&medium_version=selector&target_lander=NONE",
+      "https://www.viator.com/tours/Baku/Free-Product/d22974-176027P10?pid=P00220435&mcid=42383&medium=link&medium_version=selector&target_lander=NONE&campaign=tours-page",
   },
 ]
