@@ -2,7 +2,8 @@ import Link from "next/link"
 import type { ReactNode } from "react"
 import { ExternalLink } from "lucide-react"
 import { viatorTours, viatorLink } from "./viator"
-import { ViatorWidget, VIATOR_WIDGETS } from "@/components/viator-widget"
+import { ViatorWidget } from "@/components/viator-widget"
+import { VIATOR_WIDGETS } from "@/lib/viator"
 
 function In({ href, children }: { href: string; children: ReactNode }) {
   return (

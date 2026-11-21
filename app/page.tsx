@@ -2,7 +2,8 @@ import Link from "next/link"
 import { Button } from "@/components/ui/button"
 import { Card, CardContent, CardFooter, CardHeader, CardTitle } from "@/components/ui/card"
 import { ArrowRight, Star, MapPin, Clock, Users } from "lucide-react"
-import { ViatorWidget, VIATOR_WIDGETS } from "@/components/viator-widget"
+import { ViatorWidget } from "@/components/viator-widget"
+import { VIATOR_WIDGETS } from "@/lib/viator"
 
 export default function HomePage() {
   return (

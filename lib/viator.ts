@@ -75,3 +75,9 @@ export function toursFor(text: string, count = 3): ViatorTour[] {
     .sort((a, b) => b.score - a.score || a.i - b.i)
   return scored.slice(0, count).map((s) => s.tour)
 }
+
+/** Official Viator widgets created in the partner dashboard. */
+export const VIATOR_WIDGETS = {
+  topTours: "W-23e687ae-e0f8-44e3-b993-97fd0a3b4c86",
+  allBaku: "W-637a2665-56e4-49ec-8dc8-0250b17466f2",
+}
