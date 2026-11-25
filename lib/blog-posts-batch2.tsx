@@ -105,6 +105,36 @@ function BestTimeContent() {
         Tufandag resorts usually open from mid-December to early April, about three hours from the city.
       </p>
 
+      <h2>Best time to visit the rest of Azerbaijan</h2>
+      <p>
+        Azerbaijan packs a lot of climates into a small country, so the best time to visit depends on where you&apos;re
+        going beyond Baku:
+      </p>
+      <Ul>
+        <li>
+          <strong>Sheki, Gabala and the northern foothills:</strong> May to early July and September to October bring green
+          forests, mild days and autumn colours. Summers are cooler than Baku. See our{" "}
+          <In href="/blog/baku-to-sheki-gabala">Sheki and Gabala guide</In>.
+        </li>
+        <li>
+          <strong>Quba, Shahdag and the high Caucasus:</strong> June to September for hiking and mountain villages;
+          mid-December to March for skiing at Shahdag. Mountain roads can be snowy in winter. See our{" "}
+          <In href="/blog/quba-shahdag-day-trip">Quba and Shahdag guide</In>.
+        </li>
+        <li>
+          <strong>Gobustan and the Absheron Peninsula:</strong> spring and autumn. Summer is very hot on the bare desert,
+          and the mud volcano tracks can close after heavy rain. See our{" "}
+          <In href="/blog/day-trips-from-baku">day trips from Baku</In>.
+        </li>
+        <li>
+          <strong>Caspian beaches:</strong> mid-June to mid-September, when the sea is warm enough for swimming.
+        </li>
+      </Ul>
+      <p>
+        <strong>Overall, the best time to visit Azerbaijan is May to June or September to October</strong>, when both Baku
+        and the countryside are pleasant and you can combine the city with mountains and day trips.
+      </p>
+
       <TipBox title="Quick guide: when should you go?">
         <p>✓ <strong>Best overall:</strong> late April to June, September to October</p>
         <p>✓ <strong>Festivals:</strong> Novruz in late March</p>
@@ -129,6 +159,10 @@ function BestTimeContent() {
           {
             q: "Does it snow in Baku?",
             a: "Snow in the city is unusual and rarely lasts, though cold winds make winter feel chilly. For reliable snow, head to the Shahdag or Tufandag ski resorts in the mountains.",
+          },
+          {
+            q: "When is the best time to visit Azerbaijan?",
+            a: "May to June and September to October are the best months to visit Azerbaijan. The weather is warm but not hot in Baku, and the mountains around Sheki, Gabala and Quba are green and easy to explore.",
           },
           {
             q: "Is Baku windy?",
@@ -1325,15 +1359,15 @@ export const batch2Posts = [
   },
   {
     slug: "best-time-to-visit-baku",
-    title: "Best Time to Visit Baku: Weather Month by Month",
+    title: "Best Time to Visit Baku and Azerbaijan: Season-by-Season Guide",
     category: "Travel Tips",
     excerpt:
-      "When to visit Baku for the best weather, festivals, beach days and skiing, with a season-by-season guide to what Azerbaijan's capital is like all year.",
+      "The best time to visit Baku and Azerbaijan for good weather, festivals, beach days, mountain hikes and skiing, with a season-by-season guide for the city and the regions.",
     image: "/baku-boulevard-promenade.jpg",
     date: "Nov 9, 2026",
-    updated: "2026-11-09",
+    updated: "2026-11-25",
     readTime: "6 min read",
-    keywords: "best time to visit Baku, Baku weather, Baku in summer, Baku in winter, when to go to Azerbaijan",
+    keywords: "best time to visit Azerbaijan, best time to visit Baku, when to go to Azerbaijan, Azerbaijan weather, Baku in summer, Baku in winter",
     Content: BestTimeContent,
   },
   {

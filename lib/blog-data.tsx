@@ -452,7 +452,7 @@ function BudgetTravelContent() {
         Baku's public transit is refreshingly cheap and easy:
       </p>
       <ul className="list-disc pl-6 space-y-2">
-        <li><strong>Metro & Buses:</strong> Single metro ride costs just 0.30 AZN (~$0.18 USD)! Get a BakıKart for 2 AZN and top it up.</li>
+        <li><strong>Metro & Buses:</strong> Single metro ride costs just 0.60 AZN (~$0.35 USD)! Get a BakıKart for 2 AZN and top it up.</li>
         <li><strong>Walking:</strong> The city center is quite walkable. Many attractions are within comfortable walking distance.</li>
         <li><strong>Ride-Hailing:</strong> Use Yandex Go app for metered fares – short rides cost 2–3 AZN ($2–3).</li>
       </ul>

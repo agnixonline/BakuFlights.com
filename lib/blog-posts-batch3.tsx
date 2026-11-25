@@ -371,7 +371,112 @@ function LayoverContent() {
   )
 }
 
+/* ------------------------------------------------------------------ */
+/* What to eat in Baku                                                 */
+/* ------------------------------------------------------------------ */
+function FoodContent() {
+  const P = "what-to-eat-in-baku"
+  const dishes: [string, string][] = [
+    ["Plov", "Azerbaijan's celebration dish: saffron rice cooked separately and served with lamb or chicken, dried fruit and chestnuts. Dozens of regional versions exist; shah plov comes baked inside a golden crust of lavash."],
+    ["Qutab", "Thin, half-moon flatbreads cooked on a griddle and filled with herbs, cheese, pumpkin or minced meat. Cheap, quick and sold everywhere, they're the perfect snack."],
+    ["Dolma", "Vine leaves, cabbage leaves or vegetables (aubergine, pepper and tomato together) stuffed with minced meat and rice, usually served with garlic yoghurt."],
+    ["Lyulya kebab", "Minced lamb kebab grilled over charcoal and wrapped in lavash with onion and sumac. Look for restaurants with a mangal (open grill) out front."],
+    ["Piti", "A rich lamb, chickpea and chestnut stew slow-cooked in individual clay pots, a speciality of Sheki. Eat the broth with bread first, then the meat."],
+    ["Dushbara", "Tiny lamb dumplings served in a clear broth with dried mint and vinegar. Traditionally, the smaller the dumplings, the more skilled the cook."],
+    ["Saj", "Meat, potatoes and vegetables cooked and served sizzling on a domed iron pan. Great for sharing with a group."],
+    ["Dovga", "A warm yoghurt soup with rice and fresh herbs, served hot in winter and cold in summer, and said to be good for digestion."],
+  ]
+  return (
+    <div className="space-y-6">
+      <p className="text-xl leading-relaxed">
+        Azerbaijani food is one of the best reasons to visit Baku: generous, full of fresh herbs, and shaped by the Silk
+        Road, with influences from Persia, Turkey and the Caucasus. Here are the dishes you have to try, what to drink,
+        the sweets to take home, and the easiest way to taste it all.
+      </p>
+
+      <h2>The dishes you have to try</h2>
+      <div className="not-prose grid gap-4 md:grid-cols-2">
+        {dishes.map(([name, text]) => (
+          <div key={name} className="rounded-xl border bg-background p-5">
+            <h3 className="font-serif text-xl font-bold mb-2">{name}</h3>
+            <p className="text-muted-foreground text-sm leading-relaxed">{text}</p>
+          </div>
+        ))}
+      </div>
+
+      <h2>Tea culture: the heart of every meal</h2>
+      <p>
+        Black tea is served everywhere, all day, in pear-shaped armudu glasses. It usually comes with lemon, sugar cubes
+        and little dishes of fruit jam (cherry, fig, quince or even walnut), which you eat with a spoon between sips. A tea
+        house (chaykhana) is the best place to slow down, especially in the Old City.
+      </p>
+
+      <h2>Sweets to take home</h2>
+      <Ul>
+        <li><strong>Pakhlava:</strong> layered diamond-shaped pastry with nuts and syrup, a Novruz favourite.</li>
+        <li><strong>Shekerbura:</strong> crescent-shaped pastries filled with ground nuts and sugar, with a pinched pattern on top.</li>
+        <li><strong>Sheki halva:</strong> a sticky, lacy rice-flour sweet from Sheki, very different from Turkish halva.</li>
+        <li><strong>Jams and dried fruit:</strong> pomegranate, fig and quince, sold in markets and souvenir shops.</li>
+      </Ul>
+
+      <h2>What to drink</h2>
+      <Ul>
+        <li><strong>Ayran:</strong> a salty yoghurt drink that goes perfectly with kebabs.</li>
+        <li><strong>Sherbet:</strong> sweet fruit and herb drinks, often served at celebrations.</li>
+        <li><strong>Pomegranate juice:</strong> fresh and everywhere in autumn.</li>
+        <li><strong>Local wine and beer:</strong> Azerbaijan has a growing wine scene, and local wine is good value compared with imports.</li>
+      </Ul>
+
+      <h2>The easiest way to try it all: a food tour</h2>
+      <p>
+        If you only have a few days, a food tour is the fastest way to taste the classics, find places you&apos;d never spot
+        on your own and learn the stories behind the dishes from a local.
+      </p>
+      <TourPick id="food" rank={1} page={P} best="food lovers">
+        <p>
+          Walk through the city with a local guide, stopping at street food stalls, bakeries and traditional eateries to
+          taste qutab, kebabs, sweets and tea.
+        </p>
+      </TourPick>
+      <p>
+        Prefer to explore by yourself? Our guide to{" "}
+        <In href="/blog/food-guide">where to eat in Baku</In> lists restaurants, tea gardens and street food spots.
+      </p>
+
+      <h2>Food tips for Baku</h2>
+      <Ul>
+        <li>Bread is sacred in Azerbaijan: don&apos;t throw it away or leave it on the floor.</li>
+        <li>Portions are big, so share dishes or order fewer than you think.</li>
+        <li>Check whether a service charge is already on the bill before tipping (around 10% is normal).</li>
+        <li>Vegetarians do well with qutab, dolma, salads, cheeses and dovga, but ask, as some dishes use meat stock.</li>
+        <li>Eating out is good value. See our <In href="/blog/is-baku-expensive">Baku costs guide</In> for typical prices.</li>
+      </Ul>
+
+      <Faq
+        items={[
+          { q: "What is Baku's most famous food?", a: "Plov is Azerbaijan's best-known dish, served at celebrations. Qutab, dolma and lyulya kebab are the everyday favourites." },
+          { q: "Is Azerbaijani food spicy?", a: "Not usually. It relies on fresh herbs, saffron, sumac and dried fruit rather than chilli heat." },
+          { q: "Is street food safe in Baku?", a: "Generally yes. Busy stalls with high turnover are your best bet, and a food tour is an easy way to try street food with a local." },
+        ]}
+      />
+    </div>
+  )
+}
+
 export const batch3Posts = [
+  {
+    slug: "what-to-eat-in-baku",
+    title: "What to Eat in Baku: 12 Azerbaijani Foods and the Best Food Tour",
+    category: "Food & Drink",
+    excerpt:
+      "Plov, qutab, dolma, piti and more: the Azerbaijani dishes, sweets and drinks to try in Baku, tea culture explained, and the easiest way to taste them all.",
+    image: "/azerbaijani-food-kebab-plov.jpg",
+    date: "Nov 25, 2026",
+    updated: "2026-11-25",
+    readTime: "7 min read",
+    keywords: "Baku food, what to eat in Baku, Azerbaijani food, Azerbaijani dishes, Baku food tour, Azerbaijani cuisine",
+    Content: FoodContent,
+  },
   {
     slug: "best-baku-tours",
     title: "Best Baku Tours 2026: Top Tours and Day Trips Worth Booking",

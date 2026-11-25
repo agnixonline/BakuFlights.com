@@ -2,7 +2,7 @@ import { MetadataRoute } from 'next'
 import { blogPosts } from '@/lib/blog-data'
 
 const baseUrl = 'https://www.bakuflights.com'
-const SITE_UPDATED = new Date('2026-11-21')
+const SITE_UPDATED = new Date('2026-11-25')
 
 export default function sitemap(): MetadataRoute.Sitemap {
   const staticPages: MetadataRoute.Sitemap = [
